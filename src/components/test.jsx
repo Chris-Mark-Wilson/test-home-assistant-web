@@ -1,5 +1,5 @@
 import { useState} from "react";
-import { getEndpoint } from "./components/api";
+import { getEndpoint } from "./api";
 
 export const Test=()=>{
     const [data, setData] = useState("No data");
