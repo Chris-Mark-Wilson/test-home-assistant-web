@@ -1,6 +1,6 @@
 import axios from "axios";
 const TOKEN = import.meta.env.VITE_REACT_APP_ACCESS_TOKEN;
-console.log(TOKEN)
+// console.log(TOKEN)
 axios.defaults.headers.common['Authorization'] = `Bearer ${TOKEN}`;
 const url='/api/'
 
