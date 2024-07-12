@@ -1,6 +1,6 @@
 li{
     margin:0 auto;
     width:60%;
-    display:flex;
+    display:block;
     justify-content: space-between;
 }
