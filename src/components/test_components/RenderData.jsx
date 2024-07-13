@@ -4,9 +4,8 @@ import { ShowServices } from "./ShowServices";
 export const RenderData=({ dataType, data })=> {
     switch (dataType) {
         case "api":
-            return(
-                <div>{data[0].message?data[0].message:'API Failed'}</div>
-            )
+            return <div>{data[0].message?data[0].message:'API Failed'}</div>
+            
         case "states":
             return <ShowStates data={data} />;
          
@@ -15,8 +14,6 @@ export const RenderData=({ dataType, data })=> {
             
 
       default:
-        return <>
-        <div>No data to show</div>
-        </>;
+        return <div>No data to show</div>;
     }
   }
