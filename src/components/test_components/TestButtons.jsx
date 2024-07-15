@@ -20,7 +20,7 @@ export const TestButtons = ({setData,setDataType}) => {
       };
 
   return (
-    <>
+    <section className="test-buttons">
         <a href="https://developers.home-assistant.io/docs/api/rest" target="_blank">API docs</a>
       <button onClick={() => sendRequest()}>/api/</button>
        {/*
@@ -28,6 +28,6 @@ export const TestButtons = ({setData,setDataType}) => {
       <button onClick={() => sendRequest("events")}>/api/events</button> */}
       <button onClick={() => sendRequest("services")}>/api/services</button>
       <button onClick={() => sendRequest("states")}>/api/states</button>
-    </>
+    </section>
   );
 };

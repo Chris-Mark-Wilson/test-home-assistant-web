@@ -1,0 +1,13 @@
+li{
+    margin:0 auto;
+    width:60%;
+    display:flex;
+    justify-content: space-between;
+}
+.test-buttons{
+    display:flex;
+    flex-direction: column;
+    top:0;
+    left:0;
+    position:fixed;
+}
