@@ -10,11 +10,11 @@ export const TestView = () => {
 
 
   return (
-    <>
+    <div className="test-view">
       <TestButtons setData={setData} setDataType={setDataType}/>
       <RenderData dataType={dataType} data={data} />
         
       {/* <div className="data">{JSON.stringify(data)}</div> */}
-    </>
+    </div>
   );
 };

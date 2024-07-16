@@ -1,4 +1,4 @@
-export const ShowServices=({data})=>{
+export const RenderElements=({data})=>{
     
 function renderDataAsElements(data) {
     // Function to recursively render data
@@ -6,13 +6,16 @@ function renderDataAsElements(data) {
       if (Array.isArray(data)) {
         // If data is an array, map over it and render each item
         return data.map((item, index) => (
-          <li key={index}>{renderRecursive(item)}</li>
+          <div key={index}>{renderRecursive(item)}</div>
         ));
       } else if (typeof data === 'object' && data !== null) {
         // If data is an object, render each key-value pair
         return Object.entries(data).map(([key, value], index) => (
-          <div key={index}>
+          <div key={index}> 
+          {(key==='entity_id' || key==='domain') && < div ><hr/><br/></div>}
+          <div>
             <strong>{key}:</strong> {renderRecursive(value)}
+          </div>
           </div>
         ));
       } else {
@@ -22,11 +25,11 @@ function renderDataAsElements(data) {
     };
   
     // Wrap the recursive rendering in a fragment or div
-    return <>{renderRecursive(data)}</>;
+    return <><hr/>{renderRecursive(data)}</>;
   }
-    console.log(data)
+    // console.log(data)
     return (
-        <div>
+        <div className="data-list">
         {renderDataAsElements(data)}
       </div>
     )

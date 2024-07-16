@@ -1,4 +1,5 @@
 import { getEndpoint } from "../../functions/api";
+import "../../css_files/test_css_files/test.css";
 
 export const TestButtons = ({setData,setDataType}) => {
 

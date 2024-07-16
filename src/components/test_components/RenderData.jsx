@@ -1,5 +1,5 @@
-import { ShowStates } from "./ShowStates";
-import { ShowServices } from "./ShowServices";
+
+import { RenderElements} from "./RenderElements";
 
 export const RenderData=({ dataType, data })=> {
     switch (dataType) {
@@ -7,10 +7,10 @@ export const RenderData=({ dataType, data })=> {
             return <div>{data[0].message?data[0].message:'API Failed'}</div>
             
         case "states":
-            return <ShowStates data={data} />;
+            return <RenderElements data={data} />;
          
         case "services":
-            return <ShowServices data={data}/>
+            return <RenderElements data={data}/>
             
 
       default:

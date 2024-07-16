@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { postEndpoint,getEndpoint } from "../../functions/api"
 
+
 export const AppView=()=>{
 
     const [response,setResponse]=useState('No response')
@@ -36,7 +37,8 @@ export const AppView=()=>{
     }
     }
     return (<>
-        <div>AppView</div>
+   
+        <div className="app-view">AppView</div>
         <button onClick={openWindow}>Open Window</button>
         <button onClick={closeWindow}>Close Window</button>
         <div id='response-data'>{response}</div>

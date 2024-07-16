@@ -1,13 +1,25 @@
-li{
-    margin:0 auto;
-    width:60%;
+.data-list{
+    box-sizing: border-box;
+max-width:100%;
     display:flex;
-    justify-content: space-between;
+   
+    flex-direction: column;
+ 
+    margin-top: 10%;
+overflow-x:hidden;
 }
+.test-view{
+
+    max-width:100%;
+}
+
+
+
 .test-buttons{
     display:flex;
     flex-direction: column;
-    top:0;
-    left:0;
-    position:fixed;
+}
+
+.test-buttons button{
+    margin:10px;
 }
