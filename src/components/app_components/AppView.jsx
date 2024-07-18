@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { postEndpoint,getEndpoint } from "../../functions/api"
+import { postEndpoint,getEndpoint } from "../../functions/ha-api"
 
 
 export const AppView=()=>{

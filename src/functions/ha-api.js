@@ -2,6 +2,7 @@ import axios from "axios";
 const TOKEN = import.meta.env.VITE_REACT_APP_ACCESS_TOKEN;
 // console.log(TOKEN)
 axios.defaults.headers.common['Authorization'] = `Bearer ${TOKEN}`;
+//full url in vite.config as proxy for cors issues in development
 const url='/api/'
 
 export const getEndpoint = async (endpoint="")=>{
@@ -29,3 +30,5 @@ export const postEndpoint= async (endpoint,data)=>{
     }
 
 }
+
+
