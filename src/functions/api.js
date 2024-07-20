@@ -29,3 +29,12 @@ export const postEndpoint= async (endpoint,data)=>{
     }
 
 }
+export const getInstance= async ()=>{
+    try{
+        const response=await axios.get('/')
+        return response.data
+    }
+    catch(err){
+        return Promise.reject(err)
+    }
+}

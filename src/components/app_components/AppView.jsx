@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { postEndpoint,getEndpoint } from "../../functions/api"
+import { postEndpoint,getEndpoint,getInstance } from "../../functions/api"
 
 
 export const AppView=()=>{
@@ -36,11 +36,24 @@ export const AppView=()=>{
         setResponse(err)
     }
     }
+
+    const showInstance=async()=>{
+        try{
+            const result=await getInstance()
+            console.log(result)
+            setResponse(result)
+        }
+        catch(err){
+            console.log(err)
+            setResponse(err)
+        }
+    }
     return (<>
    
         <div className="app-view">AppView</div>
         <button onClick={openWindow}>Open Window</button>
         <button onClick={closeWindow}>Close Window</button>
+        <button onClick={showInstance}>Show Instance</button>
         <div id='response-data'>{response}</div>
         </>
         )
