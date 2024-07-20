@@ -1,11 +1,12 @@
 import { useState } from "react"
 import { postEndpoint,getEndpoint,getInstance } from "../../functions/api"
+import { HomeAssistantDashboard } from "./HomeAssistantDashboard"
 
 
 export const AppView=()=>{
 
     const [response,setResponse]=useState('No response')
-
+    const [instance,setInstance]=useState(false)
     const openWindow= async ()=>{
         console.log('opening window')
         try{
@@ -38,23 +39,23 @@ export const AppView=()=>{
     }
 
     const showInstance=async()=>{
-        try{
-            const result=await getInstance()
-            console.log(result)
-            setResponse(result)
-        }
-        catch(err){
-            console.log(err)
-            setResponse(err)
-        }
+        if(instance){
+            setInstance(false)
+    } else{
+        setInstance(true)
     }
-    return (<>
+}
+    return (
+    <>
    
         <div className="app-view">AppView</div>
         <button onClick={openWindow}>Open Window</button>
         <button onClick={closeWindow}>Close Window</button>
-        <button onClick={showInstance}>Show Instance</button>
+        <button onClick={showInstance}>{!instance?'Show Instance':'Hide Instance'}</button>
         <div id='response-data'>{response}</div>
+        {instance&&
+        <HomeAssistantDashboard/>
+}
         </>
         )
 }

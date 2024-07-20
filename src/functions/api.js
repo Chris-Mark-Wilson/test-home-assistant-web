@@ -1,8 +1,7 @@
 import axios from "axios";
-const TOKEN = import.meta.env.VITE_REACT_APP_ACCESS_TOKEN;
-// console.log(TOKEN)
-axios.defaults.headers.common['Authorization'] = `Bearer ${TOKEN}`;
-//full url in vite.config as proxy for cors issues in development
+// const TOKEN = import.meta.env.VITE_REACT_APP_ACCESS_TOKEN;
+// // console.log(TOKEN)
+// axios.defaults.headers.common['Authorization'] = `Bearer ${TOKEN}`;
 const url='/api/'
 
 export const getEndpoint = async (endpoint="")=>{
@@ -32,12 +31,10 @@ export const postEndpoint= async (endpoint,data)=>{
 }
 export const getInstance= async ()=>{
     try{
-        const response=await axios.get('/')
+        const response=await axios.get('http://192.168.1.15:8123')
         return response.data
     }
     catch(err){
         return Promise.reject(err)
     }
 }
-
-
