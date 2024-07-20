@@ -11,6 +11,8 @@ export const RenderData=({ dataType, data })=> {
          
         case "services":
             return <RenderElements data={data}/>
+            case "switches":
+            return <RenderElements data={data}/>
             
 
       default:

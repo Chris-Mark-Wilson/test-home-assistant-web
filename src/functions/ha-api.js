@@ -2,6 +2,7 @@ import axios from "axios";
 const TOKEN = import.meta.env.VITE_REACT_APP_ACCESS_TOKEN;
 // console.log(TOKEN)
 axios.defaults.headers.common['Authorization'] = `Bearer ${TOKEN}`;
+//full url in vite.config as proxy for cors issues in development
 const url='/api/'
 
 export const getEndpoint = async (endpoint="")=>{
@@ -29,6 +30,7 @@ export const postEndpoint= async (endpoint,data)=>{
     }
 
 }
+<<<<<<< HEAD:src/functions/api.js
 export const getInstance= async ()=>{
     try{
         const response=await axios.get('/')
@@ -38,3 +40,7 @@ export const getInstance= async ()=>{
         return Promise.reject(err)
     }
 }
+=======
+
+
+>>>>>>> e17b5e138e98faf4f136af10c908e29ba0f195e4:src/functions/ha-api.js
