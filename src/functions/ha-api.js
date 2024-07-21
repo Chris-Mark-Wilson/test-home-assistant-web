@@ -32,7 +32,8 @@ export const postEndpoint= async (endpoint,data)=>{
 }
 export const getInstance= async ()=>{
     try{
-        const response=await axios.get('/')
+        const response=await axios.get('https://192.168.1.43')
+        console.log(response.data)
         return response.data
     }
     catch(err){

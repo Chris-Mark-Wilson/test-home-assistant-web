@@ -48,7 +48,7 @@ export const HeaderNav = () => {
       className="nav-bar"
     >
       <Container className="navbar-container">
-        <Navbar.Brand href="#home">Landlord Property Automation</Navbar.Brand>
+        <Navbar.Brand href="#home">Home Assistant Multi</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
